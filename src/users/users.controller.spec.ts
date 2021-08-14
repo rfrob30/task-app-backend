@@ -9,6 +9,7 @@ describe('Users Controller', () => {
       controllers: [UsersController],
     }).compile();
   });
+
   it('should be defined', () => {
     const controller: UsersController =
       module.get<UsersController>(UsersController);

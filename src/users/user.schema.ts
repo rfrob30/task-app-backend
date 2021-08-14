@@ -2,17 +2,20 @@ import * as mongoose from 'mongoose';
 import * as bcrypt from 'bcrypt';
 import { User } from './user.interface';
 
-export const UserSchema = new mongoose.Schema<User>({
-  email: {
-    type: String,
-    unique: true,
-    required: true,
+export const UserSchema = new mongoose.Schema<User>(
+  {
+    email: {
+      type: String,
+      unique: true,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
   },
-  password: {
-    type: String,
-    required: true,
-  },
-});
+  { versionKey: false },
+);
 
 UserSchema.pre<User>('save', function (next) {
   let user = this;
