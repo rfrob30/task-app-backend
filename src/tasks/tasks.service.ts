@@ -24,14 +24,7 @@ export class TasksService {
   }
 
   async findAll() {
-    return await this.taskModel.find();
-  }
-
-  async findOne(id: number) {
-    const task = await this.taskModel.findOne({ _id: id }, (err, results) => {
-      console.log(err, results);
-    });
-    return `This action returns a #${id} task`;
+    return await this.taskModel.find().sort({ _id: -1 });
   }
 
   async update(id: string, updateTaskDto: UpdateTaskDto) {

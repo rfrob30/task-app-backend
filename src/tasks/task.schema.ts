@@ -12,5 +12,8 @@ export const TaskSchema = new mongoose.Schema<Task>(
       required: true,
     },
   },
-  { versionKey: false },
+  {
+    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
+    versionKey: false,
+  },
 );
