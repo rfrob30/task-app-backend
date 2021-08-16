@@ -1,0 +1,2 @@
+# removing this will cause a bcrypt error if not using a linux machine
+node_modules

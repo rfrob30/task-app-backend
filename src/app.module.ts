@@ -11,7 +11,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot('mongodb://localhost/nest', {
+    MongooseModule.forRoot('mongodb://db_mongo', {
       useFindAndModify: false,
     }),
     AuthModule,
