@@ -19,8 +19,6 @@ export class AuthService {
   async validateUserByPassword(loginData: LoginUserDto) {
     let userToAttempt = await this.usersService.findOneByEmail(loginData.email);
 
-    console.log(userToAttempt, 'deez nuts');
-
     return new Promise((resolve) => {
       userToAttempt.checkPassword(loginData.password, (err, isMatch) => {
         if (err) throw new UnauthorizedException();
