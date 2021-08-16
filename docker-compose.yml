@@ -3,7 +3,6 @@ services:
   back_app:
     depends_on:
       - db
-    restart: always
     build: .
     ports:
       - '8080:4000'
