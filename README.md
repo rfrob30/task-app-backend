@@ -2,9 +2,19 @@
 
 ## Installation
 
+If you have docker and docker-compose
+```bash
+$ docker-compose up -d
+```
+
+Otherwise
+
+Go to `app.module.ts` and replace mongodb url to 'mongodb://localhost/<dbname>'
+
 ```bash
 $ npm install
 ```
+
 
 ## Running the app
 
