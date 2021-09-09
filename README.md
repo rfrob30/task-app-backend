@@ -28,5 +28,3 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
-I ended up creating a whole user module with registration so if you want to add a user, u can use `/user` but i did not add user relation to the task object since the app was meant for 1 user.
